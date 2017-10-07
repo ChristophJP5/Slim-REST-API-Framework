@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteBase /
+
+
+RewriteRule ^([^/]+)/([^/]+)/([^/]+) index.php?controller=$1&method=$3&id=$2 [QSA,NC,L]
+RewriteRule ^([^/]+)/([^/]+) index.php?controller=$1&method=index&id=$2 [QSA,NC,L]
+RewriteRule ^([^/]+) index.php?controller=$1&method=index&id=-1 [QSA,NC,L]
+RewriteRule ^.* index.php?controller=Controller&method=index&id=-1 [QSA,NC,L]
+
