@@ -2,8 +2,14 @@ RewriteEngine On
 RewriteBase /
 
 
-RewriteRule ^([^/]+)/([^/]+)/([^/]+) index.php?controller=$1&method=$3&id=$2 [QSA,NC,L]
-RewriteRule ^([^/]+)/([^/]+) index.php?controller=$1&method=index&id=$2 [QSA,NC,L]
+#fetch /Users/2/lists 
+RewriteRule ^([^/]+)/([^/]+)/(\d+) index.php?controller=$1&method=$3&id=$2 [QSA,NC,L]
+#fetches routes like /Users/1 
+RewriteRule ^([^/]+)/(\d+) index.php?controller=$1&method=index&id=$2 [QSA,NC,L]
+#fetches routes like /Users/lists => controller: "Users", method: "lists"
+RewriteRule ^([^/]+)/([^/]+) index.php?controller=$1&method=$2&id=-1 [QSA,NC,L]
+#fetches all like /Users
 RewriteRule ^([^/]+) index.php?controller=$1&method=index&id=-1 [QSA,NC,L]
+# default fetch all 
 RewriteRule ^.* index.php?controller=Controller&method=index&id=-1 [QSA,NC,L]
 

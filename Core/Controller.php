@@ -18,7 +18,9 @@ class Controller
     {
         $this->name = $name;
         array_push($this->params, "session");
-        $this->testParams($_COOKIE);
+        $this->testParams($_COOKIE);        
+        //  validates post params
+        $this->testParams(json_decode(file_get_contents('php://input'), true)); 
         $userModel = new \Models\Users();
         if(!$this->isValid()){
             $response = $this->response([], \API\Config\errors::$invalidSession);

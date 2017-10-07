@@ -41,6 +41,18 @@ class Authenticate extends Controller
         }
     }
 
+    public function register(){
+        
+        $name = $this->params["name"];
+        $email = $this->params["email"];
+        $password = $this->params["password"];
+        $password = password_hash($password,PASSWORD_BCRYPT,[
+            'cost' => 12,
+        ]);
+        $this->usersModel->addUser($email, $name, $password, time(), time(), hash("sha256", time()));
+        $this->index();
+    }
+
 
     /*
      * Overwritte to ignore validation
