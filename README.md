@@ -1,5 +1,7 @@
 # Slim-REST-API-Framework
-Ein PHP Framework zum schnellen und sauberen erstellen von REST API's 
+Do you hate spending time setting up framworks? Do you want to take controll? Do you enjoy the task of programming?
+Then this is a framework to create clean REST API's in a fast way.
+
 
 ## Installation
 If you want to use a DB connection change the settings `/Config/Config.php`
@@ -26,3 +28,8 @@ class Users {
 ```
 
 more explained in the .htaccess
+
+I have a passion to make sharing information fast and easy for everybody and love to help others period.
+
+Any trouble setting this up or some questions?
+Feel free to contact me developer@christophjp.de
