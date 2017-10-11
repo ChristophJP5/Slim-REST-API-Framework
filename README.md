@@ -1,11 +1,11 @@
 # Slim-REST-API-Framework
 Do you hate spending time setting up framworks? Do you want to take controll? Do you enjoy the task of programming?
-Then this is a framework to create clean REST API's in a fast way.
+This is a framework to create clean REST API's in a fast way. Easy to setup
 
 
 ## Installation
 If you want to use a DB connection change the settings `/Config/Config.php`
-In `Core/Controller.php` is an uservalidation method
+In `Core/Controller.php` is an uservalidation method.
 All Default Error-messages are defined in `Config/Errors.php`
 
 ## DB handling
